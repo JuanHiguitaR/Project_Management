@@ -1,9 +1,11 @@
 public class Project {
+    // Attributes
     private String name;
     private String description;
     private Task [] tasks;
     private Integer index;
 
+    // Constructor
     public Project(String name, String description, int tasksNumber) {
         this.name = name;
         this.description = description;
@@ -19,6 +21,7 @@ public class Project {
         return description;
     }
 
+    // Method to add new task
     public void addTask(Task task){
         if(index < this.tasks.length) {
             this.tasks[index] = task;
@@ -29,6 +32,7 @@ public class Project {
         }
     }
 
+    // Method to change status task
     public void doneTask(Task task){
         if(this.tasks != null){
             for (Task value : this.tasks) {
@@ -43,6 +47,7 @@ public class Project {
         }
     }
 
+    // show info method
     public void showTasks(){
         for (Task value : this.tasks) {
             System.out.printf("Project name: %s Description Tasks: %s Status Task: %s%n",
